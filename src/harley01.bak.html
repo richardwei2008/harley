@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, target-densitydpi=high-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name=”description” content="">
+    <title>Harley Davidson</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <style type="text/css" media="screen">
+        #images { width: 100%; height: 300px; overflow-x: hidden; text-align: center; list-style: none; }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.endless-scroll.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>-->
+    <script type="text/javascript" src="js/app-1.0.0.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+                        $('#images').scrollTop(101);
+            var images = $("ul#images").clone().find("li");
+            $('#images').endlessScroll({
+                pagesToKeep: 3,
+                inflowPixels: 100,
+                fireDelay: 10,
+                content: function(i, p, d) {
+                    console.log(i, p, d)
+                    return images.eq(Math.floor(Math.random()*8))[0].outerHTML;
+                }
+            });
+
+//            $('#images').infinitescroll({
+//
+//                navSelector  : "div.navigation",
+//                // selector for the paged navigation (it will be hidden)
+//                nextSelector : "div.navigation a:first",
+//                // selector for the NEXT link (to page 2)
+//                itemSelector : "#images li"
+//                // selector for all items you'll retrieve
+//            });
+
+
+        });
+    </script>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a">
+<div>
+    <ul id="images">
+        <li><img src="images/harley01/01.png" alt="Image1" width="100%"/></li>
+        <li><img src="images/harley01/02.png" alt="Image2" width="100%"/></li>
+        <li><img src="images/harley01/03.png" alt="Image3" width="100%"/></li>
+        <li><img src="images/harley01/04.png" alt="Image4" width="100%"/></li>
+        <li><img src="images/harley01/05.png" alt="Image5" width="100%"/></li>
+        <li><img src="images/harley01/06.png" alt="Image6" width="100%"/></li>
+        <li><img src="images/harley01/07.png" alt="Image7" width="100%"/></li>
+        <li><img src="images/harley01/08.png" alt="Image8" width="100%"/></li>
+    </ul>
+</div>
+</body>
+</html>

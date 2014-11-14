@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, target-densitydpi=high-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name=”description” content="">
+    <title>Harley Davidson</title>
+
+    <link href="css/framework7.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.framework7.reset.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="js/app.wechat.share-0.1.1.js"></script>
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Index Page-->
+            <div data-page="index" class="page">
+                <div class="page-content">
+                    即将开启
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var redirectToUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/chexing.html";
+        window.location.href = redirectToUrl;
+        window.event.returnValue = false;
+        return false;
+    })();
+</script>
+</body>
+</html>

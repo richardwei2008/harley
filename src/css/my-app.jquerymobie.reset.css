@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*jquery mobile reset*/
+
+.ui-input-text {
+    margin: 0;
+    border-width: 0;
+    border-style: none;
+}
+.ui-listview>.ui-li-static {
+     padding: 0;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+.ui-icon-carat-r:after {
+    background-image: none!important;
+}
+/*jquery mobile adjust*/
+.ui-content-custom {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 0!important;
+}
+.ui-menu-custom {
+    width: 100%;
+    padding: 0!important;
+    margin: 0!important;
+}
+.ui-li-custom {
+    border: 0!important;
+}
