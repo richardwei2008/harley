@@ -1,5 +1,8 @@
-(function() {
+$(window).load(function() {
     $(".menuitem-harley").each(function(i) {
-        $(this).delay(i*300 - 100).animate({top : -12}, 200).animate({top : 0}, 100);
+        $(this).delay(i*300 - 240).animate({top : -36}, 150).animate({top : 0}, 150, function() {
+            $(this).children(".menuitem-shadow").fadeIn(20);
+        });
     })
-})();
+
+});

@@ -9,130 +9,77 @@
     <meta name=”description” content="">
     <title>Harley Davidson</title>
 
-    <!-- Path to your custom app styles-->
+
+    <link href="css/framework7.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.framework7.reset.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/idangerous.swiper-2.7.0.css">
+
     <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/my-app.harley.css">
+    <link rel="stylesheet" href="css/my-app.harley01.css">
     <link rel="stylesheet" href="css/loader.css">
-    <style type="text/css" media="screen">
 
-    </style>
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <!--<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>-->
-    <!--<script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>-->
-    <script type="text/javascript" src="js/app-1.0.0.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-//            $('#images').scrollTop(101);
-//            var images = $("ul#images").clone().find("li");
-//            $('#images').endlessScroll({
-//                pagesToKeep: 3,
-//                inflowPixels: 100,
-//                fireDelay: 10,
-//                content: function(i, p, d) {
-//                    console.log(i, p, d)
-//                    return images.eq(Math.floor(Math.random()*8))[0].outerHTML;
-//                }
-//            });
-//            $("img.lazy").lazyload({
-//                placeholder:"images/loading.gif",
-//                effect:"fadeIn"
-//            });
-
-            $(".zoom-control").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
-            $(".scroll-hint").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
-
-
-            $(".view-panel").bind("click", function() {
-                var control = $($(this).children(".zoom-control")[0]);
-                if (control.css("background-image").indexOf("zoom-in") > 0) {
-                    control.css("background-image", "url(images/zoom-out.png)");
-                    $("#zoom-view").removeClass("zoom-view-in").addClass("zoom-view-out");
-                    $(".zoom-control").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
-                } else {
-                    control.css("background-image", "url(images/zoom-in.png)");
-                    $("#zoom-view").removeClass("zoom-view-out").addClass("zoom-view-in");
-                }
-            });
-            var imgload = function (img, callback) {
-                var timer = setInterval(function() {
-                    if (img.complete) {
-                        callback(img)
-                        clearInterval(timer)
-                    }
-                }, 50)
-            };
-            var fadeIn = function(that){
-                $(that).fadeIn("slow");
-                $(that).attr("width", "100%");
-            };
-            var  lazyload = function() {
-                return function(that) {
-                    var lazys = $(".lazy");
-
-                    $(lazys).each(function(i) {
-                        $(this).addClass("lazy-fade");
-                        $(this).removeClass("lazy-placerholder");
-                        this.src = $(this).attr("data-original");
-                        imgload(this, fadeIn);
-//                        $(that).fadeIn("slow");
-//                        $(that).attr("width", "100%");
-                    }, this);
-                }(this);
-            };
-
-            $(".description-panel").scroll(function(){
-
-                var boxTop = $(".description-panel").scrollTop(), docHeight  = $("#images").height(), boxHeight = $(".description-panel").height();
-                var  scrolltrigger = 0.2;
-                console.log("Box Top: " + boxTop);
-                console.log("Box Height: " + boxHeight);
-                console.log("Doc Height: " + docHeight );
-                if  ((boxTop/(docHeight - boxHeight)) > scrolltrigger) {
-                    console.log('scroll trigger');
-                    lazyload();
-                }
-            });
-
-            $(".back-control").bind("click", function() {
-                $(".zoom-control").css("background-image", "url(images/zoom-in.png)");
-                $("#zoom-view").removeClass("zoom-view-out").addClass("zoom-view-in");
-                $(".description-panel").animate({ scrollTop: 0 }, "slow");
-            });
-
-//            $('#images').infinitescroll({
-//
-//                navSelector  : "div.navigation",
-//                // selector for the paged navigation (it will be hidden)
-//                nextSelector : "div.navigation a:first",
-//                // selector for the NEXT link (to page 2)
-//                itemSelector : "#images li"
-//                // selector for all items you'll retrieve
-//            });
-        });
-    </script>
 </head>
 <body>
-
-<div class="back-control"></div>
-<div class="view-panel">
-    <div class="zoom-control"></div>
-    <div class="harley" id="harley" align="center">
-        <div id="zoom-view" class="zoom-view zoom-view-in" ></div>
+<div class="pages">
+    <div data-page="harley01" class="page">
+        <div class="page-content">
+            <div class="harley-content">
+                <div class="back-control">
+                    <div class="navbar">
+                        <div class="navbar-inner" align="center">
+                            <div class="left sliding"  style="position: relative; width: 100%; height:100%"><a href="#" class="back link" style="margin-left: 40%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </a></div>
+                        </div>
+                    </div></div>
+                <div class="harley-view-panel">
+                    <div class="zoom-control"></div>
+                    <div class="harley" id="harley01" align="center">
+                        <div class="harley-zoom-view zoom-view-in" ></div>
+                    </div>
+                </div>
+                <div class="harley-description-panel">
+                    <div class="harley-fill"></div>
+                    <div id="swiper-harley01" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div  class="preview-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="description-panel">
-    <ul id="images">
-        <li><img src="../src/images/harley01/01.png" alt="Image1" width="100%"/></li>
-        <li><img src="../src/images/harley01/02.png" alt="Image2" width="100%"/></li>
-        <li><img src="../src/images/harley01/03.png" alt="Image3" width="100%"/></li>
-        <li><img class="lazy" src="../src/images/loading.gif" data-original="images/harley01/04.png" alt="Image4" width="32px"  /></li>
-        <li><img class="lazy" src="../src/images/loading.gif" data-original="images/harley01/05.png" alt="Image5" width="32px"  /></li>
-        <li><img class="lazy" src="../src/images/loading.gif" data-original="images/harley01/06.png" alt="Image6" width="32px"  /></li>
-        <li><img class="lazy" src="../src/images/loading.gif" data-original="images/harley01/07.png" alt="Image7" width="32px"  /></li>
-        <li><img class="lazy" src="../src/images/loading.gif" data-original="images/harley01/08.png" alt="Image8" width="32px"  /></li>
-    </ul>
 
-    <div class="scroll-hint"></div>
-</div>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/app-1.0.0.js"></script>
+<script type="text/javascript" src="js/app.harley-1.0.0.js"></script>
 </body>
 </html>

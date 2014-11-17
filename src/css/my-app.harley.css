@@ -1,0 +1,192 @@
+@charset "UTF-8";
+.harley-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 416px;
+}
+.harley-view-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 416px;
+}
+.harley {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    z-index: 100;
+    display: block;
+}
+.harley-fill {
+    position: relative;
+    width: 100%;
+    height: 40%;
+}
+.harley-description-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+.preview-item {
+    width: 100%;
+    height: 100%;
+}
+
+.back-control {
+    position: absolute;
+    top : 0;
+    margin: 0 auto;
+    z-index: 10000;
+    background: url(../images/back.png) no-repeat right center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 64px;
+}
+
+.zoom-control {
+    position: absolute;
+    top : 10%;
+    margin: 3% auto;
+    z-index: 300;
+    background: url(../images/zoom-in.png) no-repeat right center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 96px;
+}
+.zoom-view-in {
+    width: 100%;
+    height: 100%;
+}
+.zoom-view-out {
+    width: 200%;
+    height: 200%;
+}
+
+/*responsive width*/
+@media screen and (min-width:1081px) {
+}
+@media screen and (min-width:721px) and (max-width: 1080px) {
+
+}
+@media screen and (min-width:541px) and (max-width: 720px) {
+    /*Moto Razr HD*/
+    .back-control {
+        height: 144px;
+    }
+    .zoom-control {
+        height: 220px;
+    }
+    @media screen and (max-height: 1136px)  {
+
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 540px) {
+    /*Moto 3 4 Razr*/
+    .back-control {
+        height: 108px;
+    }
+    .zoom-control {
+        height: 165px;
+    }
+    @media screen and (max-height: 852px)  {
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 480px) {
+    /*Xperia Sola*/
+    .back-control {
+        height: 96px;
+    }
+    .zoom-control {
+        height: 147px;
+    }
+    @media screen and (max-height: 758px)  {
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 424px) {
+    /*LG Optimus HD*/
+    .back-control {
+        height: 85px;
+    }
+    .zoom-control {
+        height: 130px;
+    }
+    @media screen and (max-height: 669px)  {
+
+    }
+}
+@media screen and (min-width: 385px) and (max-width: 414px) {
+    /*ip6 Plus*/
+    .back-control {
+        height: 83px;
+    }
+    .zoom-control {
+        height: 127px;
+    }
+    @media screen and (max-height: 608px)  {
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 384px) {
+    /*LG Optimus G*/
+    .back-control {
+        height: 77px;
+    }
+    .zoom-control {
+        height: 118px;
+    }
+    @media screen and (max-height: 568px)  {
+
+    }
+}
+@media screen and (min-width: 361px) and (max-width: 375px) {
+    /*iphone6*/
+    .back-control {
+        height: 75px;
+    }
+    .zoom-control {
+        height: 115px;
+    }
+
+    @media screen and (max-height: 603px)  {
+
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    .back-control {
+        height: 72px;
+    }
+    .zoom-control {
+        height: 110px;
+    }
+    @media screen and (min-height: 570px) and (max-height:640px) {
+
+    }
+    @media screen and (max-height: 569px)  {
+        /*Moto Defy 569*/
+
+    }
+}
+@media screen and (max-width:320px) {
+    @media screen and (min-height: 505px) and (max-height:568px) {
+
+
+    }
+    @media screen and (min-height: 481px) and (max-height:504px) {
+
+    }
+    @media screen and (min-height: 417px) and (max-height:480px) {
+
+    }
+    /*240*/
+    @media screen and (max-height:416px) {
+    }
+}

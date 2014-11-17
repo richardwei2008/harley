@@ -29,11 +29,22 @@
 
     },
     contentEffect : function() {
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.pagination',
+            loop: false,
+            grabCursor: true,
+            paginationClickable: true,
+            mode: 'horizontal'
+//            onSlideClick: function(){
+//                fileSelected( mySwiper.clickedSlideIndex );
+//            }
+        });
+
         $(".zoom-control").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
         $(".scroll-hint").fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
 
 
-        $(".view-panel").bind("click", function() {
+        $(".view-panel").unbind("click").bind("click", function() {
             var control = $($(this).children(".zoom-control")[0]);
             if (control.css("background-image").indexOf("zoom-in") > 0) {
                 control.css("background-image", "url(images/zoom-out.png)");
@@ -96,21 +107,22 @@
                 App.contentEffect();
             },  50);
         });
-
         $(".item-title").bind("click", function() {
             var rollback =  $(".item-title-active").children(".menuitem-harley");
-            var activeLayer = $(rollback).children(".menuitem-detail");
-            $(activeLayer).children("a").children(".item-inner").children(".menuitem-mask").css("left", "auto");
-            $(activeLayer).css("visibility", "hidden");
+            var rollLayer = $(rollback).children(".menuitem-detail");
             $(rollback).children(".menuitem-shadow").fadeIn(500);
+//            $(rollLayer).css("visibility", "hidden");
+            $(rollLayer).css("opacity", "0");
+
 
             $(this).addClass("item-title-active");
             var layer =  $(this).children(".menuitem-harley");
-            $(layer).children(".menuitem-shadow").fadeOut(500);
             var activeLayer = $(layer).children(".menuitem-detail");
-            $(activeLayer).css("visibility", "visible");
-            $(activeLayer).children("a").children(".item-inner").children(".menuitem-mask").animate({left:'-320px'}, 500);
-
+            $(activeLayer).css("opacity", "1");
+            var maskLayer = $(activeLayer).children("a").children(".item-inner").children(".menuitem-mask");
+            $(maskLayer).css("left", "auto");
+            $(layer).children(".menuitem-shadow").fadeOut(500);
+            $(maskLayer).animate({left:'-320px'}, 500);
 
         });
     }
