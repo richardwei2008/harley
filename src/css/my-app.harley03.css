@@ -2,7 +2,7 @@
 #harley03 .harley-zoom-view {
     position: relative;
     display: block;
-    background: url(../images/harley03/harley.png) no-repeat right center;
+    background: url(../images/harley03/harley-c.png) no-repeat right center;
     background-size: 100% 100%;
 }
 #swiper-harley03 .swiper-wrapper .swiper-slide:first-child .preview-item{

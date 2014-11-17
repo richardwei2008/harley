@@ -2,14 +2,14 @@
 #harley06 .harley-zoom-view {
     position: relative;
     display: block;
-    background: url(../images/harley06/harley.png) no-repeat right center;
+    background: url(../images/harley06/harley-c.png) no-repeat right center;
     background-size: 100% 100%;
 }
 #swiper-harley06 .swiper-wrapper .swiper-slide:first-child .preview-item{
     background: url(../images/harley06/harley-d1.png) no-repeat center;
     background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;rr
+    -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
 }
 #swiper-harley06 .swiper-wrapper .swiper-slide:nth-child(2) .preview-item {
