@@ -7,179 +7,504 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name=”description” content="">
-    <title>Harley Davidson</title>
+    <title>哈雷戴维森</title>
 
     <link href="css/framework7.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/my-app.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.menu.css" rel="stylesheet" type="text/css"/>
     <link href="css/my-app.framework7.reset.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="css/idangerous.swiper-2.7.0.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <style>
+        .share-mask {
+            position: absolute;
+            width: 100%;
+            left : 0;
+            top : 0;
+            display:none;
+            z-index:9999999;
+        }
 
+        #horizontal {
+            width: 100%;
+            height: 100%;
+            z-index: 10000000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: #000 url('images/vertical.png') no-repeat center;
+            background-size:  auto 100% ;
+            display: none;
+        }
+        /*reset framework 7*/
+        .content-block {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .menu-custom {
+            width: 100%;
+            height: 100%;
+            background: url(images/menu.jpg) no-repeat right center;
+            background-size: 100% 100%;
+        }
+        .menu-link {
+            display: inline-block; width: 100%; height: 100%
+        }
+        .menu-custom-link {
+            height: 20%;
+        }
+        .menu-button1  {
+            position: absolute;
+            top : 100%;
+            right : 6px;
+            margin-top : -70px;
+            width: 64px;
+            height: 64px;
+            background: url(images/menu-button1.png) no-repeat right center;
+            background-size: 100% 100%;
+            z-index:9999999;
+        }
+        /*.menu-button2  {*/
+            /*position: fixed;*/
+            /*right : 6px;*/
+            /*bottom : 6px;*/
+            /*width: 64px;*/
+            /*height: 64px;*/
+            /*background: url(images/menu-button2.png) no-repeat right center;*/
+            /*background-size: 100% 100%;*/
+            /*z-index:9999999;*/
+        /*}*/
+    </style>
 </head>
 <body>
 <!-- Status bar overlay for fullscreen mode-->
 <div class="statusbar-overlay"></div>
-<!-- Panels overlay-->
-<div class="panel-overlay"></div>
-<!-- Views-->
-<div class="views">
-    <!-- Your main view, should have "view-main" class-->
-    <div class="view view-main">
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
-            <!-- Index Page-->
 
-            <div data-page="index" class="page">
-                <div class="page-content">
-                    <div class="list-block">
-                        <ul>
-                            <!--<li><a href="#page2" data-rel="dialog" data-transition="slide">关于我们</a></li>-->
-                            <!--<li><a href="#page3">联系我们</a></li>-->
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley01">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-01">
-                                            <a href="harley01.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley02">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-02">
-                                            <a href="harley02.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley03">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-03">
-                                            <a  href="harley03.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley04">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-04">
-                                            <a  href="harley04.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley05">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-05">
-                                            <a  href="harley05.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley06">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-06">
-                                            <a  href="harley06.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley07">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-07">
-                                            <a href="harley07.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley08">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div   class="menuitem-detail menuitem-detail-bg-08">
-                                            <a  href="harley08.html" class="item-link item-content">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley09">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div  class="menuitem-detail menuitem-detail-bg-09">
-                                            <a  href="harley09.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item-title menuitem-wrapper">
-                                    <div class="menuitem-harley menuitem-harley10">
-                                        <div class="menuitem-shadow menuitem-shadow-bg"></div>
-                                        <div class="menuitem-detail menuitem-detail-bg-10">
-                                            <a  href="harley10.html" class="item-link item-content item-active-state-clear">
-                                                <div class="item-inner  ">
-                                                    <div class="menuitem-mask menuitem-mask-bg"></div>
-                                                    <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
-                                                </div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Right panel with cover effect-->
+<div class="panel panel-right panel-reveal">
+    <div class="content-block">
+        <!--<div class="menu-button2"><a href="#" data-panel="right" class="link open-panel menu-link" ></a></div>-->
+        <div class="menu-custom">
+            <div style="height: 45%"></div>
+            <div style="height: 55%">
+                <ul style="height: 100%">
+                    <li class="menu-custom-link">
+                        <a href="#" style="display: inline-block; width: 100%; height: 100%" onclick="window.location.href='chexing.html'"></a>
+                    </li>
+                    <li class="menu-custom-link">
+                        <a href="#" style="display: inline-block; width: 100%; height: 100%" onclick="window.location.href='peijian.html'"></a>
+                    </li>
+                    <li class="menu-custom-link">
+                        <a href="#" style="display: inline-block; width: 100%; height: 100%" onclick="window.location.href='fushi.html'"></a>
+                    </li>
+                    <!--<li class="menu-custom-link">-->
+                    <!--<a href="rule.html" style="display: inline-block"></a>-->
+                    <!--</li>-->
+                </ul>
             </div>
         </div>
     </div>
+</div>
+<div class="loader"></div>
+
+<div id="horizontal"></div>
+
+<div id="share-cover" onClick="document.getElementById('share-cover').style.display='none';"  class="share-mask">
+    <img src="images/share-mask.png" width="100%" height="100%">
+</div>
+<!-- Views-->
+<div class="views">
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Your main view, should have "view-main" class-->
+<div class="view view-main">
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through toolbar-through">
+<!-- Index Page-->
+<div data-page="index" class="page">
+<div class="page-content">
+<div class="scroll-hint"></div>
+<!--style="display: inline-block; width: 100%; height: 100%"-->
+<div class="menu-button1"><a href="#" data-panel="right" class="link open-panel menu-link" ></a></div>
+<div class="list-block">
+<ul>
+<!--<li><a href="#page2" data-rel="dialog" data-transition="slide">关于我们</a></li>-->
+<!--<li><a href="#page3">联系我们</a></li>-->
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley01">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-01">
+                <a href="harley01.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley02">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-02">
+                <a href="harley02.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley03">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-03">
+                <a  href="harley03.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley04">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-04">
+                <!--bugfix replace 04-06-->
+                <a  href="harley06.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley05">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-05">
+                <a  href="harley05.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley06">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-06">
+                <!--bugfix replace 04-06-->
+                <a  href="harley04.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley07">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-07">
+                <a href="harley07.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley08">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div   class="menuitem-detail menuitem-detail-bg-08">
+                <a  href="harley08.html" class="item-link item-content">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley09">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div  class="menuitem-detail menuitem-detail-bg-09">
+                <a  href="harley09.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley10">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-10">
+                <a  href="harley10.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+<!--simple features-->
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley11">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-11">
+                <a  href="harley11.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley12">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-12">
+                <a  href="harley12.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley13">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-13">
+                <a  href="harley13.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley14">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-14">
+                <a  href="harley14.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley15">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-15">
+                <a  href="harley15.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley16">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-16">
+                <a  href="harley16.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley17">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-17">
+                <a  href="harley17.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley18">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-18">
+                <a  href="harley18.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley19">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-19">
+                <a  href="harley19.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley20">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-20">
+                <a  href="harley20.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley21">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-21">
+                <a  href="harley21.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley22">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-22">
+                <a  href="harley22.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley23">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-23">
+                <a  href="harley23.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley24">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-24">
+                <a  href="harley24.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="item-title menuitem-wrapper">
+        <div class="menuitem-harley menuitem-harley25">
+            <div class="menuitem-shadow menuitem-shadow-bg"></div>
+            <div class="menuitem-detail menuitem-detail-bg-25">
+                <a  href="harley25.html" class="item-link item-content item-active-state-clear">
+                    <div class="item-inner  ">
+                        <div class="menuitem-mask menuitem-mask-bg"></div>
+                        <div class="menuitem-detail-link menuitem-detail-link-bg"></div>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 </div>
 <link rel="stylesheet" href="css/my-app.harley.css">
 <link rel="stylesheet" href="css/my-app.harley01.css">
@@ -192,7 +517,9 @@
 <link rel="stylesheet" href="css/my-app.harley08.css">
 <link rel="stylesheet" href="css/my-app.harley09.css">
 <link rel="stylesheet" href="css/my-app.harley10.css">
+<link rel="stylesheet" href="css/my-app.harley.more.css">
 
+<script type="text/javascript" src="js/app.wechat.share-0.1.1.js"></script>
 <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="js/jquery.doubletap.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/framework7.min.js"></script>
@@ -201,5 +528,6 @@
 <script type="text/javascript" src="js/my-app.js"></script>
 <script type="text/javascript" src="js/app-1.0.0.js"></script>
 <script type="text/javascript" src="js/menu.effect.js"></script>
+
 </body>
 </html>

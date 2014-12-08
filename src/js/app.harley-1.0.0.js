@@ -11,10 +11,17 @@
     });
 
     $(document).ready(function() {
-
-        $(".zoom-control").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500);
-        $(".scroll-hint").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500);
-
+        var scrollTapped = false;
+        if (scrollTapped) {
+            $(".swiper-mask").css("display", "none");
+        }
+        $(".swiper-mask").bind("click", function() {
+            scrollTapped = true;
+            $(this).fadeOut();
+        });
+//        $(".zoom-control").fadeIn(500).fadeTo(0.001, 500).fadeIn(500).fadeTo(0.001, 500).fadeIn(500).fadeTo(0.001, 500);
+//        $(".scroll-hint").fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500);
+        $(".zoom-control").animate({opacity: 1}, 500).animate({opacity: 0.01}, 500).animate({opacity: 1}, 500).animate({opacity: 0.01}, 500);
         var zoom = function() {
             return (function() {
                 var zoom = $(".zoom-control");
@@ -25,16 +32,20 @@
                     zoom.css("background-image", "url(images/zoom-out.png)");
                     view.animate({opacity: 0}, 500, function() {
                         $(this).removeClass("zoom-view-in").addClass("zoom-view-out");
+//                        $(this).css("width", "200%");
                         $(this).css("background-image", "url(images/harley01/harley-f.png)");
                     }).animate({opacity: 1}, 500);
 //                    view.css("background-image", "url(images/harley01/harley-f.png)");
-                    zoom.fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500);
+//                    zoom.fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500);
+//                    zoom.fadeTo(0.001, 500).fadeIn(500).fadeTo(0.001, 500).fadeIn(500).fadeTo(0.001, 500);
+                    zoom.animate({opacity: 1}, 500).animate({opacity: 0.01}, 500).animate({opacity: 1}, 500).animate({opacity: 0.01}, 500);
                     slider.fadeOut();
                     back.fadeOut();
                 } else {
                     zoom.css("background-image", "url(images/zoom-in.png)");
                     view.animate({opacity: 0}, 500, function() {
                         $(this).removeClass("zoom-view-out").addClass("zoom-view-in");
+//                        $(this).css("width", "100%");
                         $(this).css("background-image", "url(images/harley01/harley-c.png)");
                     }).animate({opacity: 1}, 500);
                     slider.fadeIn();

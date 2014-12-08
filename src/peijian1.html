@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, target-densitydpi=high-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name=”description” content="">
+    <title>Harley Davidson</title>
+
+    <link href="css/framework7.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.css" rel="stylesheet" type="text/css"/>
+    <link href="css/my-app.framework7.reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/loader.css" rel="stylesheet" type="text/css"/>
+    <style>
+        #horizontal {
+            width: 100%;
+            height: 100%;
+            z-index: 10000000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: #000 url('images/vertical.png') no-repeat center;
+            background-size:  auto 100% ;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="js/app.wechat.share-0.1.1.js"></script>
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<div class="loader"></div>
+<div id="horizontal"></div>
+<!-- Views-->
+<div class="views">
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Index Page-->
+            <div data-page="index" class="page">
+                <div class="page-content">
+                    <div style="background: url(images/accessory.jpg) center no-repeat; background-size: 100% 100%; width: 100%; height: 100%">
+                        <div style="position: relative; height: 58%"></div>
+                        <div style="position: relative; height: 11%;"><a href="chexing.html" style="display:block; position: relative;  width: 50%; height: 100%; margin: 0 auto"></a></div>
+                        <div style="position: relative; height: 11%;"><a href="main.html" style="display:block; position: relative; width: 50%; height: 100%; margin: 0 auto"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        window.onload = function () {
+            orientationchange();
+            window.onorientationchange = function () {
+                orientationchange();
+            }
+        };
+        function orientationchange() {
+            if (window.orientation == undefined) {
+                return;
+            }
+            if (window.orientation == 0 || window.orientation == 180) {
+                //竖屏
+                document.getElementById("horizontal").style.display = 'none';
+            } else {
+                //横屏
+                document.getElementById("horizontal").style.display = 'block';
+            }
+        }
+        $(".loader").fadeOut("slow");
+    })
+</script>
+</body>
+</html>

@@ -4,10 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>哈雷戴维森</title>
-      <script type="text/javascript" src="js/app.wechat.share-0.1.1.js"></script>
+
+
+      <style>
+          html, body {width: 100%; height: 100%; background-color:#000000}
+          #horizontal {
+              width: 100%;
+              height: 100%;
+              z-index: 10000000;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              background: #000 url('images/vertical.png') no-repeat center;
+              background-size:  auto 100% ;
+              display: none;
+          }
+      </style>
+      <link rel="stylesheet" href="css/loader.css">
+
     <script src="http://so1699.qiniudn.com/runtime.js"></script>
-    <script src="js/main.js"></script>
-    <style>html, body {width: 100%; height: 100%; background-color:#000000}</style>
+    <script src="http://harley.qiniudn.com/main_v20141121.1.js"></script>
   </head>
 
 
@@ -20,14 +36,43 @@
 
 
   <body style="margin: 0; overflow: hidden">
-   <div id="swiffycontainer" style="display:block;margin: 0 auto; padding: 0px; height: 100%; max-width:1200px;  max-height:100%;">
-    </div>
-    <script>
-      
-      var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
-          swiffyobject, {  });
-      
-      stage.start();
-    </script>
+
+  <div id="horizontal"></div>
+  <div class="loader"></div>
+   <div id="swiffycontainer" style="display:block;margin: 0 auto; padding: 0px; height: 100%; max-width:1200px;  max-height:100%;"> </div>
+   <script type="text/javascript" src="js/app.wechat.share-0.1.1.js"></script>
+   <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+   <script>
+       $(document).ready(function() {
+           window.onload = function () {
+               orientationchange();
+               window.onorientationchange = function () {
+                   orientationchange();
+               }
+           };
+           function orientationchange() {
+               if (window.orientation == undefined) {
+                   return;
+               }
+               if (window.orientation == 0 || window.orientation == 180) {
+                   //竖屏
+                   document.getElementById("horizontal").style.display = 'none';
+               } else {
+                   //横屏
+                   document.getElementById("horizontal").style.display = 'block';
+               }
+           }
+           var height = $("#swiffycontainer").height();
+           var width = height * 320 / 504;
+           $("#swiffycontainer").width(width);
+
+
+           var stage = new swiffy.Stage(document.getElementById('swiffycontainer'),
+                   swiffyobject, {  });
+
+           stage.start();
+           $(".loader").fadeOut("slow");
+       })
+   </script>
   </body>
 </html>

@@ -30,12 +30,15 @@
 }
 /*menu effect*/
 .list-block .item-title {
-    -webkit-flex-shrink: 1;
+    /*-webkit-flex-shrink: 1;*/
+    -webkit-flex-shrink: 0;
     -ms-flex: 0 1 auto;
-    flex-shrink: 1;
+    /*flex-shrink: 1;*/
+    flex-shrink: 0;
     white-space: nowrap;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
+    overflow-y: visible;
     text-overflow: ellipsis;
     max-width: 100%;
 }
@@ -46,6 +49,7 @@
     /*padding-left: 15px;*/
     padding-left: 0px;
     min-height: 44px;
+    height: 100%; /*custom*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -89,6 +93,7 @@
     padding-top: 0px;
     padding-bottom: 0px;
     min-height: 44px;
+    height: 100%; /*custom*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -96,8 +101,10 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
+    /*-webkit-box-flex: 1;*/
+    /*-ms-flex: 1;*/
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
@@ -118,4 +125,32 @@
     opacity: 0;
     /* border-bottom: 1px solid #c4c4c4; */
     border: 0;
+}
+body.with-panel-right-reveal .panel-overlay {
+    margin-left: 51.88%;
+}
+
+.panel {
+    z-index: 1000;
+    display: none;
+    background: #111;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    width: 48.12%;
+    top: 0;
+    height: 100%;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+}
+body.with-panel-right-reveal .views {
+    -webkit-transform: translate3d(-48.12%,0,0);
+    -ms-transform: translate3d(-48.12%,0,0);
+    transform: translate3d(-48.12%,0,0);
 }

@@ -1,0 +1,543 @@
+@charset "UTF-8";
+
+/*menu page*/
+.menuitem-wrapper {
+    width: 100%;
+    height: 72px;
+    background-color: #000000;
+}
+
+.menuitem-harley {
+    position: absolute;
+    background-color: #000000;
+    top : 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.scroll-hint {
+    display: none;
+    position: absolute;
+    bottom : 5%;
+    margin: 0 auto;
+    z-index: 9999;
+    background: url(../images/down.png) no-repeat center;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+/*responsive width*/
+@media screen and (min-width:1081px) {
+    .menuitem-wrapper {
+        height: 288px;
+    }
+    .scroll-hint {
+        height: 216px;
+    }
+}
+@media screen and (min-width:961px) and (max-width: 1080px) {
+    .menuitem-wrapper {
+        height: 243px;
+    }
+    .scroll-hint {
+        height: 182px;
+    }
+}
+@media screen and (min-width:720px) and (max-width: 960px) {
+    .menuitem-wrapper {
+        height: 216px;
+    }
+    .scroll-hint {
+        height: 162px;
+    }
+}
+@media screen and (min-width:541px) and (max-width: 720px) {
+    /*Moto Razr HD*/
+    .menuitem-wrapper {
+        height: 162px;
+    }
+    .scroll-hint {
+        height: 121px;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 540px) {
+    /*Moto 3 4 Razr*/
+    .menuitem-wrapper {
+        height: 121px;
+    }
+    .scroll-hint {
+        height: 91px;
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 480px) {
+    /*Xperia Sola*/
+    .menuitem-wrapper {
+        height: 108px;
+    }
+    .scroll-hint {
+        height: 81px;
+    }
+}
+@media screen and (min-width: 415px) and (max-width: 424px) {
+    /*LG Optimus HD*/
+    .menuitem-wrapper {
+        height: 95px;
+    }
+    .scroll-hint {
+        height: 71px;
+    }
+}
+@media screen and (min-width: 385px) and (max-width: 414px) {
+    /*ip6 Plus*/
+    .menuitem-wrapper {
+        height: 93px;
+    }
+    .scroll-hint {
+        height: 70px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 384px) {
+    /*LG Optimus G*/
+    .menuitem-wrapper {
+        height: 86px;
+    }
+    .scroll-hint {
+        height: 65px;
+    }
+}
+@media screen and (min-width: 361px) and (max-width: 375px) {
+    /*iphone6*/
+    .menuitem-wrapper {
+        height: 84px;
+    }
+    .scroll-hint {
+        height: 63px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    .menuitem-wrapper {
+        height: 81px;
+    }
+    .scroll-hint {
+        height: 61px;
+    }
+}
+@media screen and (max-width:320px) {
+    .menuitem-wrapper {
+        height: 72px;
+    }
+    .scroll-hint {
+        height: 54px;
+    }
+}
+
+
+.menuitem-shadow {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.menuitem-detail {
+    position: absolute;
+    background-color: #000000;
+    width: 53%;
+    margin-left: 47.5%;
+    height: 100%;
+
+    z-index: 100;
+    overflow: hidden;
+    /*visibility: hidden;*/
+    opacity: 0;
+}
+.menuitem-detail-link {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+}
+.menuitem-mask {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+}
+.menuitem-detail-bg-01 {
+    background: url(../images/menu/item-harley01-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-02 {
+    background: url(../images/menu/item-harley02-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+
+.menuitem-detail-bg-03 {
+    background: url(../images/menu/item-harley03-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-04 {
+    background: url(../images/menu/item-harley04-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-05 {
+    background: url(../images/menu/item-harley05-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-06 {
+    background: url(../images/menu/item-harley06-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-07 {
+    background: url(../images/menu/item-harley07-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-08 {
+    background: url(../images/menu/item-harley08-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-09 {
+    background: url(../images/menu/item-harley09-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-10 {
+    background: url(../images/menu/item-harley10-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-11 {
+    background: url(../images/menu/item-harley11-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-12 {
+    background: url(../images/menu/item-harley12-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-13 {
+    background: url(../images/menu/item-harley13-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-14 {
+    background: url(../images/menu/item-harley14-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-15 {
+    background: url(../images/menu/item-harley15-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-16 {
+    background: url(../images/menu/item-harley16-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-17 {
+    background: url(../images/menu/item-harley17-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-18 {
+    background: url(../images/menu/item-harley18-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-19 {
+    background: url(../images/menu/item-harley19-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-20 {
+    background: url(../images/menu/item-harley20-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-21 {
+    background: url(../images/menu/item-harley21-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-22 {
+    background: url(../images/menu/item-harley22-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-23 {
+    background: url(../images/menu/item-harley23-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-24 {
+    background: url(../images/menu/item-harley24-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-detail-bg-25 {
+    background: url(../images/menu/item-harley25-active.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+
+.menuitem-shadow-bg {
+    background: url(../images/menu/shadow.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    opacity: 0.5;
+    z-index: 200;
+}
+.menuitem-mask-bg {
+    background: url(../images/menu/item-mask.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    z-index : 2;
+}
+.menuitem-detail-link-bg {
+    background: url(../images/menu/harley-detail.png) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    z-index : 1;
+}
+.menuitem-harley01 {
+    background: url(../images/menu/item-harley01.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley02 {
+    background: url(../images/menu/item-harley02.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley03 {
+    background: url(../images/menu/item-harley03.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley04 {
+    background: url(../images/menu/item-harley04.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley05 {
+    background: url(../images/menu/item-harley05.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley06 {
+    background: url(../images/menu/item-harley06.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley07 {
+    background: url(../images/menu/item-harley07.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley08 {
+    background: url(../images/menu/item-harley08.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley09 {
+    background: url(../images/menu/item-harley09.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley10 {
+    background: url(../images/menu/item-harley10.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley11 {
+    background: url(../images/menu/item-harley11.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley12 {
+    background: url(../images/menu/item-harley12.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley13 {
+    background: url(../images/menu/item-harley13.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley14 {
+    background: url(../images/menu/item-harley14.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley15 {
+    background: url(../images/menu/item-harley15.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley16 {
+    background: url(../images/menu/item-harley16.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley17 {
+    background: url(../images/menu/item-harley17.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley18 {
+    background: url(../images/menu/item-harley18.1.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley19 {
+    background: url(../images/menu/item-harley19.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley20 {
+    background: url(../images/menu/item-harley20.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley21 {
+    background: url(../images/menu/item-harley21.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley22 {
+    background: url(../images/menu/item-harley22.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley23 {
+    background: url(../images/menu/item-harley23.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley24 {
+    background: url(../images/menu/item-harley24.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+.menuitem-harley25 {
+    background: url(../images/menu/item-harley25.jpg) no-repeat center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
